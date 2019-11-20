@@ -1,6 +1,6 @@
 package lib;
 
-public class Player {
+public class Player implements Comparable<Player> {
     // Fields
     private Name name;
     private Rollable rollable;
@@ -64,4 +64,9 @@ public class Player {
         return "Player:[name=" + name + ", dices=" + rollable + "]";
     }
 
+    @Override
+    public int compareTo(Player o) {
+
+        return this.name.compareTo(o.name);
+    }
 }

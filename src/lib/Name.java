@@ -70,12 +70,13 @@ public class Name implements Comparable<Name> {
 	
 	@Override
 	public int compareTo(Name other) {
+
 		int result = this.familyName.compareTo(other.familyName);
-		
+
 		if (result == 0) {
 			result = this.firstName.compareTo(other.firstName);
 		}
-		
+
 		return result;
 	}
 }

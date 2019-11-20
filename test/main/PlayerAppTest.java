@@ -1,15 +1,14 @@
 package main;
 
-import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-
-import org.junit.Test;
-
 import lib.Die;
 import lib.Name;
 import lib.PairOfDice;
 import lib.Player;
+import org.junit.Test;
+
+import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
 
 public class PlayerAppTest {
 
@@ -19,6 +18,7 @@ public class PlayerAppTest {
 	 */
 	@Test
 	public void testExecute() {
+
 		ArrayList<Player> players = new ArrayList<>();
 		players.add(new Player(new Name("Joe", "Bloggs"), new PairOfDice()));
 		players.add(new Player(new Name("Fred", "Jones"), new Die()));
