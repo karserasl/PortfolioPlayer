@@ -1,57 +1,67 @@
 package lib;
 
 public class Player {
-	// Fields
-	private Name name;
-	private Rollable rollable;
+    // Fields
+    private Name name;
+    private Rollable rollable;
 
-	// Constructors
-	public Player() {
-		name = new Name();
-		rollable = new PairOfDice();
-	}
+    // Constructors
+    public Player() {
 
-	public Player(Name name) {
-		this.name = name;
-		rollable = new PairOfDice();
-	}
+        name = new Name();
+        rollable = new PairOfDice();
+    }
 
-	public Player(Name name, Rollable rollable) {
-		this.name = name;
-		this.rollable = rollable;
-	}
+    public Player(Name name) {
 
-	// Getters & Setters
-	public Name getName() {
-		return this.name;
-	}
+        this.name = name;
+        rollable = new PairOfDice();
+    }
 
-	public void setName(Name name) {
-		this.name = name;
-	}
+    public Player(Name name, Rollable rollable) {
 
-	public Rollable getRollable() {
-		return this.rollable;
-	}
+        this.name = name;
+        this.rollable = rollable;
+    }
 
-	// Methods
-	public void rollDice() {
-		this.rollable.roll();
-	}
+    // Getters & Setters
+    public Name getName() {
 
-	public int getDiceScore() {
-		return this.rollable.getScore();
-	}
+        return this.name;
+    }
 
-	public void setFullPlayerName(String name) {
-		this.name.setFirstName(name.substring(0, name.indexOf(" ")));
-		this.name.setFamilyName(name.substring(name.indexOf(" ") + 1));
+    public void setName(Name name) {
 
-	}
+        this.name = name;
+    }
 
-	@Override
-	public String toString() {
-		return "Player:[name=" + name + ", dices=" + rollable + "]";
-	}
+    public Rollable getRollable() {
+
+        return this.rollable;
+    }
+
+    // Methods
+    public void rollDice() {
+
+        this.rollable.roll();
+    }
+
+    public int getDiceScore() {
+
+        return this.rollable.getScore();
+    }
+
+    public void setFullPlayerName(String name) {
+
+        this.name.setFirstName(name.substring(0, name.indexOf(" ")));
+        this.name.setFamilyName(name.substring(name.indexOf(" ") + 1));
+
+    }
+
+    @Override
+    public String toString() {
+
+        return "Player:[name=" + name + ", dices=" + rollable + "]";
+    }
 
 }

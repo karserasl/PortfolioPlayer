@@ -1,9 +1,8 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import lib.Player;
+
+import java.util.ArrayList;
 
 public class PlayerApp {
 
