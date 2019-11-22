@@ -69,4 +69,15 @@ public class Player implements Comparable<Player> {
 
         return this.name.compareTo(o.name);
     }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o) return true;
+        if (o == null || this.getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return name.equals(player.name) &&
+                rollable.equals(player.rollable);
+    }
+
 }
