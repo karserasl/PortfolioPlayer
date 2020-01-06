@@ -1,11 +1,11 @@
 package lib;
 
 /**
- * A Player has a name, and a pair of dices.
- * A Player can be empty, named with default rollable type (PairOfDice),
+ * Player Class is a Composition of Names and Rollables.
+ * A Player has a name, and a pair of dices. It can be empty, named with default rollable type (PairOfDice),
  * or named and defined rollable of any type that implements the rollable Interface.
- * The Player has many features including but not limited to:
- * rollDice, setFullPlayerName, getDiceScore etc.
+ * The Player has many features including but not limited to: rollDice, setFullPlayerName, getDiceScore etc.
+ * The Player Class implements Comparable, so it can delegate to subclasses for comparisons.
  *
  * @author P2424629
  */
@@ -115,7 +115,9 @@ public class Player implements Comparable<Player> {
     }
 
     /**
-     * Returns the String representation of the Player, containing the name and the rollable.
+     * Returns the String representation of the Player, containing the name and the rollable, by delegate to their
+     * respective
+     * Class and call the toString method on each object.
      *
      * @return The Player's name and the rollable.
      */
